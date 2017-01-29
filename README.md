@@ -24,11 +24,10 @@ Répertoire de travail pour l'apprentissage du langage C++ - [paccpp2](https://g
 - Sur **Windows**
   - La ligne de commande exacte à taper va dépendre de votre version de Visual Studio.
   - tapez `cmake --help` pour avoir une liste des options disponibles.
-  - Si vous avez Visual Studio 2013 par exemple, la commande à lancer ressemblera à:
-    - 32 bit: `cmake -G "Visual Studio 12" ..`
-    - 64 bit: `cmake -G "Visual Studio 12 Win64" -DWIN64:Bool=True ..`
+  - Si vous avez Visual Studio 2015 par exemple, la commande à lancer ressemblera à:
+    - `cmake -G "Visual Studio 14 2015" ..`
 
-- Pour générer un **MakeFile**
+- Sur linux vous pouvez générer un **MakeFile**
 
   - Taper `cmake ..`
   - Vous pourrez ensuite compiler en tapant simplement `make`
