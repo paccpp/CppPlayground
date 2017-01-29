@@ -7,8 +7,9 @@ set(CMAKE_OSX_ARCHITECTURES "i386;x86_64")
 
 project(CppPlayground)
 
-#set(CMAKE_CXX_STANDARD 11)
-#set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# Enable and require c++0x standard
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 include(scripts/utilities.cmake)
 
@@ -16,7 +17,7 @@ include(scripts/utilities.cmake)
 SUBDIRLIST(PROJECT_DIRS ${CMAKE_CURRENT_SOURCE_DIR}/source/projects)
 foreach (project_dir ${PROJECT_DIRS})
 	if (EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/source/projects/${project_dir}/CMakeLists.txt")
-		message("Generating: ${project_dir}")
+		message("-- Generating project: ${project_dir}")
 		add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/source/projects/${project_dir})
 	endif ()
 endforeach ()
